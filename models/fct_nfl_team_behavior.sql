@@ -19,7 +19,7 @@ final AS
 SELECT *,
        CASE
         WHEN players_acquired > players_traded_away THEN 'Win Now (Aggressive)'
-        WHEN picks_acquired > players_acquired THEN 'Reguilding (Asset Hoarding)'
+        WHEN picks_acquired > players_acquired THEN 'Rebuilding (Asset Hoarding)'
         ELSE 'Balanced/Neutral'
        END AS team_strategy
 FROM final
