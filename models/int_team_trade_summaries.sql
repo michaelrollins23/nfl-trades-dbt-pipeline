@@ -28,7 +28,7 @@ SELECT
     COALESCE(g.team, r.team) AS TEAM,
     g.asset_type,
     COALESCE(g.assets_given, 0) AS assets_given,
-    COALESCE(r.assets_received, 0) AS assests_received,
+    COALESCE(r.assets_received, 0) AS assets_received,
     COALESCE(r.assets_received, 0) - COALESCE(g.assets_given, 0) AS net_asset_change
 FROM giving_summary AS g
 FULL OUTER JOIN receiving_summary AS r
