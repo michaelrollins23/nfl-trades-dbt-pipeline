@@ -1,7 +1,7 @@
 WITH trade_summaries AS
 (
   SELECT *
-  FROM {{ref(int_team_trade_summaries)}}
+  FROM {{ref('int_team_trade_summaries')}}
 ),
 
 final AS
