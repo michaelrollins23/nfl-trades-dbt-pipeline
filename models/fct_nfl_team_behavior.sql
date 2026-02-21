@@ -1,7 +1,7 @@
 WITH trade_summaries AS
 (
   SELECT *
-  FROM `nfl-engineering.dbt_mrollins.int_team_trade_summaries`
+  FROM {{ref(int_team_trade_summaries)}}
 ),
 
 final AS
@@ -19,7 +19,7 @@ final AS
 SELECT *,
        CASE
         WHEN players_acquired > players_traded_away THEN 'Win Now (Aggressive)'
-        WHEN picks_acquired > players_acquired THEN 'Rebuilding (Asset Hoarding)'
+        WHEN picks_acquired > picks_traded_away THEN 'Rebuilding (Asset Hoarding)'
         ELSE 'Balanced/Neutral'
        END AS team_strategy
 FROM final
