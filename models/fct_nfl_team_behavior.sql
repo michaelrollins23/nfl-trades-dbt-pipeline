@@ -10,8 +10,8 @@ final AS
     team,
     SUM(CASE WHEN asset_type = 'Player' THEN assets_received ELSE 0 END) AS players_acquired,
     SUM(CASE WHEN asset_type = 'Player' THEN assets_given ELSE 0 END) AS players_traded_away,
-    SUM(CASE WHEN asset_type = 'Draft Pick' THEN assets_given ELSE 0 END) AS picks_traded_away,
-    SUM(CASE WHEN asset_type = 'Draft Pick' THEN assets_received ELSE 0 END) AS picks_acquired
+    SUM(CASE WHEN asset_type = 'Draft Pick' THEN assets_received ELSE 0 END) AS picks_acquired,
+    SUM(CASE WHEN asset_type = 'Draft Pick' THEN assets_given ELSE 0 END) AS picks_traded_away
     FROM trade_summaries
     GROUP BY 1
 )
