@@ -1,2 +1,2 @@
 SELECT *
-FROM {{source('nfl_dataset','nfl')}}
+FROM {{source('nfl_raw','nfl')}}
