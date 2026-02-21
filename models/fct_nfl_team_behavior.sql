@@ -9,17 +9,17 @@ final AS
   SELECT
     team,
     SUM(CASE WHEN asset_type = 'Player' THEN assets_received ELSE 0 END) AS players_acquired,
+    SUM(CASE WHEN asset_type = 'Player' THEN assets_given ELSE 0 END) AS players_traded_away,
     SUM(CASE WHEN asset_type = 'Draft Pick' THEN assets_given ELSE 0 END) AS picks_traded_away,
-    SUM(net_asset_change) AS total_net_assets,
-    CASE
-      WHEN SUM(CASE WHEN asset_type = 'Player' THEN assets_received ELSE 0 END) >
-           SUM(CASE WHEN asset_type = 'Draft Pick' THEN assets_received ELSE 0 END)
-      THEN 'Win Now (Aggressive)'
-      ELSE 'Reguilding (Conservative)'
-    END AS team_strategy
+    SUM(CASE WHEN asset_type = 'Draft Pick' THEN assets_received ELSE 0 END) AS picks_acquired
     FROM trade_summaries
     GROUP BY 1
 )
 
-SELECT *
+SELECT *,
+       CASE
+        WHEN players_acquired > players_traded_away THEN 'Win Now (Aggressive)'
+        WHEN picks_acquired > players_acquired THEN 'Reguilding (Asset Hoarding)'
+        ELSE 'Balanced/Neutral'
+       END AS team_strategy
 FROM final
