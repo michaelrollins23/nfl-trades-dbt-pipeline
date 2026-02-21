@@ -4,5 +4,5 @@ sources:
   - name: nfl_raw
     database: nfl-engineering 
     schema: nfl_dataset
-    tables:
+    tables: 
       - name: nfl
