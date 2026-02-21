@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: nfl_raw
+    database: nfl-engineering 
+    schema: nfl_dataset
+    tables:
+      - name: nfl
