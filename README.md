@@ -36,7 +36,7 @@ dbt automatically generates a data catalog containing table descriptions, column
 ### Data Lineage Graph
 *(Below is the visual flow of data from source to the final mart model)*
 
-![dbt Lineage Graph]([INSERT LINK TO YOUR LINEAGE SCREENSHOT HERE])
+<img width="1297" height="272" alt="Image" src="https://github.com/user-attachments/assets/4a855aec-c296-4cb3-9cda-2907ecdbec0d" />
 
 ### Auto-Generated dbt Catalog
 *(Column descriptions and schema test badges)*
