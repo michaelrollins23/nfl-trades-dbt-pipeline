@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_nfl_trades
+    description: "Cleaned and casted NFL trade data from the raw CSV source."
+    columns:
+      - name: trade_id
+        description: "Unique identifier for each trade transaction."
+        tests:
+          - not_null
+      - name: asset_type
+        description: "Categorization of what was traded (Player, Draft Pick, or Other)."
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Player', 'Draft Pick', 'Other/Unknown']
+
+  - name: int_team_trade_summaries
+    description: "Intermediate model aggregating assets given and received by team and type."
+    columns:
+      - name: team
+        description: "The NFL team involved in the trade."
+        tests:
+          - not_null
+
+  - name: fct_nfl_team_behavior
+    description: "Final Mart model classifying team strategies based on trade net asset movement."
+    columns:
+      - name: team
+        description: "Primary key for the team."
+        tests:
+          - unique
+          - not_null
+      - name: team_strategy
+        description: "Classification of team behavior (e.g., Win Now, Rebuilding)."
