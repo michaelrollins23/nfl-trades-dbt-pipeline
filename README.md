@@ -41,4 +41,5 @@ dbt automatically generates a data catalog containing table descriptions, column
 ### Auto-Generated dbt Catalog
 *(Column descriptions and schema test badges)*
 
-![dbt Documentation]([INSERT LINK TO YOUR DOCS SCREENSHOT HERE])
+<img width="498" height="485" alt="image" src="https://github.com/user-attachments/assets/8f693fa4-38fb-4193-89e5-1300cc2b2089" />
+
