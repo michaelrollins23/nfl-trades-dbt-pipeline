@@ -47,10 +47,9 @@ dbt automatically generates a data catalog containing table descriptions, column
 *(Final production tables cleanly materialized and separated from the development environment)*
 
 <img width="858" height="524" alt="image" src="https://github.com/user-attachments/assets/dfb280ff-a882-4a44-9367-107ef9d988e0" />
-<img width="858" height="524" alt="image" src="https://github.com/user-attachments/assets/dfb280ff-a882-4a44-9367-107ef9d988e0" />
 
 
 ### Pipeline Automation & Orchestration
 *(Production deployment job configured to automatically build models, run schema tests, and generate documentation)*
 
-![dbt Automated Job Run]([INSERT LINK TO JOB RUN SCREENSHOT HERE])
+<img width="816" height="753" alt="image" src="https://github.com/user-attachments/assets/5df0bf6b-d3cb-4d03-9504-311197142e1a" />
