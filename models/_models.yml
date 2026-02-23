@@ -33,7 +33,7 @@ models:
           - not_null
       - name: team_strategy
         description: "Classification of team behavior (e.g., Win Now, Rebuilding)."
-        - name: players_acquired
+      - name: players_acquired
         description: "Total number of player assets received by the team."
       - name: players_traded_away
         description: "Total number of player assets sent away by the team."
