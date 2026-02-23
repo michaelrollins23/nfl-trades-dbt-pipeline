@@ -43,3 +43,14 @@ dbt automatically generates a data catalog containing table descriptions, column
 
 <img width="498" height="485" alt="image" src="https://github.com/user-attachments/assets/8f693fa4-38fb-4193-89e5-1300cc2b2089" />
 
+### Cloud Warehouse Materialization (BigQuery)
+*(Final production tables cleanly materialized and separated from the development environment)*
+
+<img width="858" height="524" alt="image" src="https://github.com/user-attachments/assets/dfb280ff-a882-4a44-9367-107ef9d988e0" />
+<img width="858" height="524" alt="image" src="https://github.com/user-attachments/assets/dfb280ff-a882-4a44-9367-107ef9d988e0" />
+
+
+### Pipeline Automation & Orchestration
+*(Production deployment job configured to automatically build models, run schema tests, and generate documentation)*
+
+![dbt Automated Job Run]([INSERT LINK TO JOB RUN SCREENSHOT HERE])
