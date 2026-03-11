@@ -52,4 +52,5 @@ dbt automatically generates a data catalog containing table descriptions, column
 ### Pipeline Automation & Orchestration
 *(Production deployment job configured to automatically build models, run schema tests, and generate documentation)*
 
-<img width="816" height="753" alt="image" src="https://github.com/user-attachments/assets/5df0bf6b-d3cb-4d03-9504-311197142e1a" />
+<img width="2724" height="1279" alt="image" src="https://github.com/user-attachments/assets/9d1388db-e895-4ea9-ab01-1d3d52e17589" />
+
