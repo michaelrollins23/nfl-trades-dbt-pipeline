@@ -19,9 +19,9 @@ sources:
                       - completed
                       - cancelled
                       - pending
-  - name: event_details
-    columns:
-      - name: event_id
-        tests:
-          - unique
-          - not_null
+      - name: event_details
+        columns:
+          - name: event_id
+            tests:
+              - unique
+              - not_null
