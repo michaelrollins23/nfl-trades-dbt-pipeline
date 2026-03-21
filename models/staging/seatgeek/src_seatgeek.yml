@@ -7,7 +7,7 @@ sources:
     tables:
       - name: raw_ticket_sales
         columns:
-          - name: sale_id
+          - name: event_id
             tests:
               - unique
               - not_null
@@ -19,13 +19,13 @@ sources:
                       - completed
                       - cancelled
                       - pending
-              - relationships:
-                  arguments: 
-                    to: ref('event_details')
-                    field: event_id
       - name: event_details
         columns:
           - name: event_id
             tests:
               - unique
               - not_null
+              - relationships:
+                  arguments: 
+                    to: ref('raw_ticket_sales')
+                    field: event_id

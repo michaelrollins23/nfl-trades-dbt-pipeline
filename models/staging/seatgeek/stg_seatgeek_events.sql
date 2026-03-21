@@ -6,7 +6,7 @@ WITH raw_events AS
 
 , final AS
 (
-    SELECT CAST(event_id AS string) AS event_id
+    SELECT CAST(event_id AS INT64) AS event_id
         , event_name
         , event_venue
         , event_type
