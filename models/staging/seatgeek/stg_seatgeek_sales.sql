@@ -7,7 +7,7 @@ WITH raw_sales AS
 , renamed AS
 (
     SELECT sale_id
-        , event_id
+        , CAST(event_id AS string) AS event_id
         , customer_id
         -- Renaming 'final_price' to be more descriptive
         , final_price AS ticket_price_usd
