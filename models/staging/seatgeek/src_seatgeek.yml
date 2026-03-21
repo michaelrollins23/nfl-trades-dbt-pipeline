@@ -19,6 +19,10 @@ sources:
                       - completed
                       - cancelled
                       - pending
+              - relationships:
+                  arguments: 
+                    to: ref('event_details')
+                    field: event_id
       - name: event_details
         columns:
           - name: event_id
