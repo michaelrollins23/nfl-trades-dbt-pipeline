@@ -20,6 +20,7 @@ WITH sales AS
         , s.ticket_price_usd
         , s.sold_at
         , e.event_date
+        , ABS(DATE_DIFF(e.event_date, CAST(s.sold_at AS date), DAY)) AS days_until_event
     FROM sales AS s
     LEFT JOIN events AS e ON s.event_id = e.event_id
 )
