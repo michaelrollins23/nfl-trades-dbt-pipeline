@@ -9,6 +9,9 @@ sources:
         columns:
           - name: event_id
             tests:
+              - not_null
+          - name: sale_id
+            tests:
               - unique
               - not_null
           - name: sale_status
