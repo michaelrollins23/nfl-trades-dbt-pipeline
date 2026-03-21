@@ -1,0 +1,6 @@
+sale_id,event_id,customer_id,sale_status,list_price,final_price,sale_timestamp
+101,500,1,completed,150.00,175.00,2026-03-20 14:00:00
+102,500,2,completed,150.00,165.00,2026-03-20 14:05:00
+103,501,3,cancelled,200.00,200.00,2026-03-20 15:00:00
+104,502,4,completed,80.00,120.00,2026-03-21 09:00:00
+105,502,5,completed,80.00,115.00,2026-03-21 09:15:00

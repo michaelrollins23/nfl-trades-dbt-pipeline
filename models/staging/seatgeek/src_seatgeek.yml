@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: seatgeek_raw_data
+    schema: dbt_mrollins
+    description: "Raw data from SeatGeek seeds"
+    tables:
+      - name: raw_ticket_sales
+        columns:
+          - name: sale_id
+            tests:
+              - unique
+              - not_null
+          - name: sale_status
+            tests:
+              - accepted_values:
+                  arguments:
+                    values: 
+                      - completed
+                      - cancelled
+                      - pending
